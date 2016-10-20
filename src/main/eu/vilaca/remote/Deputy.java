@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import eu.vilaca.remote.handlers.Handler;
-import eu.vilaca.remote.handlers.SharedHandler;
+import eu.vilaca.remote.handlers.RemoteHandler;
 import eu.vilaca.remote.server.*;
 
 public class Deputy {
@@ -30,10 +30,10 @@ public class Deputy {
         return Proxy.newProxyInstance(
                 class1.getClassLoader(),
                 new Class[] { class1 },
-                new SharedHandler(class1));
+                new RemoteHandler(class1));
     }
          
-    public static BenchServer shared() {
-        return new BenchServer();
+    public static DeputyServer shared() {
+        return new DeputyServer();
     }
 }

@@ -2,18 +2,18 @@ package eu.vilaca.remote;
 
 import org.junit.Test;
 
-import eu.vilaca.remote.server.BenchServer;
+import eu.vilaca.remote.server.DeputyServer;
 import org.junit.Assert;
 
-public class GeneralTest {
+public class ProofOfConceptTest {
 
     @Test
     public void testShared() throws InstantiationException, IllegalAccessException {
 
-        BenchServer server = Deputy.shared();
+        DeputyServer server = Deputy.shared();
 
-        server.getHandler().register(new SumImpl(), Sum.class);
-        server.getHandler().register(new MultImpl(), Mult.class);
+        server.getHandler().registerSingleton(new SumImpl(), Sum.class);
+        server.getHandler().registerSingleton(new MultImpl(), Mult.class);
 
         Thread t = new Thread(server);
         t.start();

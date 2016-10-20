@@ -18,11 +18,11 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.Base64;
 
-public class SharedHandler implements InvocationHandler {
+public class RemoteHandler implements InvocationHandler {
 
     private String classname;
 
-    public SharedHandler(Class<? extends Object> class1) {
+    public RemoteHandler(Class<? extends Object> class1) {
         this.classname = class1.getCanonicalName();
     }
 

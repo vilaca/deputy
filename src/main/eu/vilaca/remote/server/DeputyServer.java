@@ -8,7 +8,7 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.ContextHandler;
 import org.eclipse.jetty.server.handler.ContextHandlerCollection;
 
-public class BenchServer implements Runnable {
+public class DeputyServer implements Runnable {
 
     private static String HOST;
     private static Integer PORT;

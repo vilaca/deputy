@@ -26,7 +26,7 @@ public class RequestHandler extends AbstractHandler {
 
     private final Map<String, Object[]> list = new HashMap<>();
 
-    public void register(Object obj, Class<? extends Object> class1) {
+    public void registerSingleton(Object obj, Class<? extends Object> class1) {
 
         for (Method m : class1.getDeclaredMethods()) {
             final String name = class1.getCanonicalName() + "." + m.getName();
