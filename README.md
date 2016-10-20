@@ -4,14 +4,14 @@ Invoke methods on remote Java classes over Http.
 
 ```
 
-        // Create singleton object in remote machine
+    // Create singleton object in remote machine
         
-        Sum sum = (Sum) Deputy.useShared(Sum.class);
+    Sum sum = (Sum) Deputy.useShared(Sum.class);
 
 
-	// run method on remote machine a test result
+    // run method on remote machine a test result
 
-        Assert.assertEquals(7, sum.calc(3, 4));
+    Assert.assertEquals(7, sum.calc(3, 4));
 
 ```
 
