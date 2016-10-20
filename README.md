@@ -9,7 +9,7 @@ Invoke methods on remote Java classes over Http.
     Sum sum = (Sum) Deputy.useShared(Sum.class);
 
 
-    // run method on remote machine a test result
+    // run method on remote machine and test result
 
     Assert.assertEquals(7, sum.calc(3, 4));
 
